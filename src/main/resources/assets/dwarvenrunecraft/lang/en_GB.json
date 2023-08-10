@@ -1,7 +1,14 @@
 {
-  "item.dwarvenrunecraft.ore_scanner": "Ore Scanner",
 
+
+  "item.dwarvenrunecraft.ore_scanner": "Ore Scanner",
   "tooltip.dwarvenrunecraft.ore_scanner.tooltip": "Right click and find stuff",
+
+
+
+  "block.dwarvenrunecraft.celestite_block": "Block of Celestite",
+
+
 
 
   "creativetab.dwarvenrunecraft_tab": "Dwarven Runecraft"

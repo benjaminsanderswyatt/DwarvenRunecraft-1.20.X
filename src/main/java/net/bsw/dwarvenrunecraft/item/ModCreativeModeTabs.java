@@ -1,6 +1,7 @@
 package net.bsw.dwarvenrunecraft.item;
 
 import net.bsw.dwarvenrunecraft.DwarvenRunecraft;
+import net.bsw.dwarvenrunecraft.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -23,6 +24,7 @@ public class ModCreativeModeTabs {
 
                         //add blocks to creative tab
 
+                        pOutput.accept(ModBlocks.CELESTITE_BLOCK.get());
 
                     })
                     .build());
