@@ -196,5 +196,23 @@
     },
     "done": true
   },
+  "dwarvenrunecraft:recipes/building_blocks/celestite_block": {
+    "criteria": {
+      "has_celestite_shard": "2023-08-11 16:25:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/root": {
+    "criteria": {
+      "crafting_table": "2023-08-11 16:26:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/redstone": {
+    "criteria": {
+      "has_redstone_block": "2023-08-11 16:28:12 +0100"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

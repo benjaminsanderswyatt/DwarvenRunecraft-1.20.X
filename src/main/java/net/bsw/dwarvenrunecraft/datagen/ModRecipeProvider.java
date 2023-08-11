@@ -1,11 +1,10 @@
 package net.bsw.dwarvenrunecraft.datagen;
 
 import net.bsw.dwarvenrunecraft.DwarvenRunecraft;
+import net.bsw.dwarvenrunecraft.block.ModBlocks;
+import net.bsw.dwarvenrunecraft.item.ModItems;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -23,20 +22,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
-        /*
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.______.get())
-                .pattern("SSS")
-                .pattern("SSS")
-                .pattern("SSS")
-                .define('S', ModItems..get())
-                .unlockedBy(getHasName(ModItems..get()), has(ModItems..get()))
-                .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems..get(),9)
-                .requires(ModBlocks..get())
-                .unlockedBy(getHasName(ModBlocks..get()), has(ModBlocks..get()))
+        /*
+        ShapedRecipeBuilder.shaped(RecipeCategory.___M__I__S__C___, ModBlocks.________________.get())
+                .pattern("CCC")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModItems.____________.get())
+                .unlockedBy(getHasName(ModItems.____________.get()), has(ModItems._____________.get()))
                 .save(pWriter);
         */
+        /*
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.___M__I__S__C___, ModItems.________-_.get(),9)
+                .requires(ModBlocks.___________.get())
+                .unlockedBy(getHasName(ModBlocks.__________.get()), has(ModBlocks.__________.get()))
+                .save(pWriter);
+        */
+
+        twoByTwoPacker(pWriter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CELESTITE_BLOCK.get(), ModItems.CELESTITE_SHARD.get());
+
     }
 
 

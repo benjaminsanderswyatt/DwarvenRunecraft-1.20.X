@@ -21,8 +21,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.CELESTITE_BLOCK.get()
-                        );
+                .add(ModBlocks.CELESTITE_BLOCK.get())
+                .add(ModBlocks.BUDDING_CELESTITE.get())
+                .add(ModBlocks.SMALL_CELESTITE_BUD.get())
+                .add(ModBlocks.MEDIUM_CELESTITE_BUD.get())
+                .add(ModBlocks.LARGE_CELESTITE_BUD.get())
+                .add(ModBlocks.CELESTITE_CLUSTER.get());
 
 
         //this.tag(BlockTags.NEEDS_STONE_TOOL)

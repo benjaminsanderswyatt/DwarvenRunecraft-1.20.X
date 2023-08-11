@@ -20,6 +20,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.ORE_SCANNER);
 
+        simpleItem(ModItems.CELESTITE_SHARD);
+
 
 
     }

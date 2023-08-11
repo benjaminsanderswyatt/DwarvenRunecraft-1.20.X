@@ -23,6 +23,20 @@ public class ModBlocks {
     public static final RegistryObject<Block> CELESTITE_BLOCK = registerBlock("celestite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
 
+    public static final RegistryObject<Block> BUDDING_CELESTITE = registerBlock("budding_celestite",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BUDDING_AMETHYST).noLootTable()));
+
+    public static final RegistryObject<Block> SMALL_CELESTITE_BUD = registerBlock("small_celestite_bud",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD)));
+    public static final RegistryObject<Block> MEDIUM_CELESTITE_BUD = registerBlock("medium_celestite_bud",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD)));
+    public static final RegistryObject<Block> LARGE_CELESTITE_BUD = registerBlock("large_celestite_bud",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD)));
+    public static final RegistryObject<Block> CELESTITE_CLUSTER = registerBlock("celestite_cluster",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)));
+
+
+
 
 
 

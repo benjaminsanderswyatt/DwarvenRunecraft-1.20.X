@@ -19,6 +19,11 @@ public class ModItems {
             () -> new OreScannerItem(new Item.Properties()));
 
 
+    public static final RegistryObject<Item> CELESTITE_SHARD = ITEMS.register("celestite_shard",
+            () -> new Item(new Item.Properties()));
+
+
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

@@ -5,8 +5,16 @@
   "tooltip.dwarvenrunecraft.ore_scanner.tooltip": "Right click and find stuff",
 
 
+  "item.dwarvenrunecraft.celestite_shard": "Celestite Shard",
 
   "block.dwarvenrunecraft.celestite_block": "Block of Celestite",
+  "block.dwarvenrunecraft.budding_celestite": "Budding Celestite",
+
+  "block.dwarvenrunecraft.small_celestite_bud": "Small Celestite Bud",
+  "block.dwarvenrunecraft.medium_celestite_bud": "Medium Celestite Bud",
+  "block.dwarvenrunecraft.large_celestite_bud": "Large Celestite Bud",
+  "block.dwarvenrunecraft.celestite_cluster": "Celestite Cluster",
+
 
 
 

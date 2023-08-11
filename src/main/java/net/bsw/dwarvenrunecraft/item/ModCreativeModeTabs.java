@@ -22,9 +22,18 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModItems.ORE_SCANNER.get());
 
+                        pOutput.accept(ModItems.CELESTITE_SHARD.get());
+
                         //add blocks to creative tab
 
                         pOutput.accept(ModBlocks.CELESTITE_BLOCK.get());
+
+                        pOutput.accept(ModBlocks.BUDDING_CELESTITE.get());
+
+                        pOutput.accept(ModBlocks.SMALL_CELESTITE_BUD.get());
+                        pOutput.accept(ModBlocks.MEDIUM_CELESTITE_BUD.get());
+                        pOutput.accept(ModBlocks.LARGE_CELESTITE_BUD.get());
+                        pOutput.accept(ModBlocks.CELESTITE_CLUSTER.get());
 
                     })
                     .build());
