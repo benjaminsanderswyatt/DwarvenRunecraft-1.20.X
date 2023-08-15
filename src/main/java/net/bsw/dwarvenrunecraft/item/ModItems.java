@@ -2,6 +2,7 @@ package net.bsw.dwarvenrunecraft.item;
 
 import net.bsw.dwarvenrunecraft.DwarvenRunecraft;
 import net.bsw.dwarvenrunecraft.item.custom.OreScannerItem;
+import net.bsw.dwarvenrunecraft.item.custom.TransformationDustItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,8 +20,19 @@ public class ModItems {
             () -> new OreScannerItem(new Item.Properties()));
 
 
+
     public static final RegistryObject<Item> CELESTITE_SHARD = ITEMS.register("celestite_shard",
             () -> new Item(new Item.Properties()));
+
+
+
+
+
+
+
+
+    public static final RegistryObject<Item> TRANSFORMATION_DUST = ITEMS.register("transformation_dust",
+            () -> new TransformationDustItem(new Item.Properties()));
 
 
 

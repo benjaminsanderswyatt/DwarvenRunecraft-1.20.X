@@ -24,6 +24,11 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModItems.CELESTITE_SHARD.get());
 
+
+
+
+                        pOutput.accept(ModItems.TRANSFORMATION_DUST.get());
+
                         //add blocks to creative tab
 
                         pOutput.accept(ModBlocks.CELESTITE_BLOCK.get());

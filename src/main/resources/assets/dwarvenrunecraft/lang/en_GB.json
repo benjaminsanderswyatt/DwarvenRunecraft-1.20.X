@@ -18,6 +18,12 @@
 
 
 
+  "item.dwarvenrunecraft.transformation_dust": "Transformation Dust",
+  "tooltip.dwarvenrunecraft.transformation_dust.tooltip": "Right click on stone for some dwarven luck",
+
+
+
+
 
   "creativetab.dwarvenrunecraft_tab": "Dwarven Runecraft"
 }

@@ -21,22 +21,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.CELESTITE_BLOCK);
 
-        blockWithItem(ModBlocks.BUDDING_CELESTITE);
 
-        /*
-        directionalBlock(ModBlocks.CELESTITE_CLUSTER.get(), models().cross(
-                getName(ModBlocks.CELESTITE_CLUSTER),
-                getBlockRegLocation(ModBlocks.CELESTITE_CLUSTER))
-                .renderType("cutout"));
-        */
+        simpleBlockWithItem(ModBlocks.BUDDING_CELESTITE.get(), cubeAll(ModBlocks.BUDDING_CELESTITE.get()));
 
-
-        blockWithItem(ModBlocks.SMALL_CELESTITE_BUD);
-        blockWithItem(ModBlocks.MEDIUM_CELESTITE_BUD);
-        blockWithItem(ModBlocks.LARGE_CELESTITE_BUD);
-        blockWithItem(ModBlocks.CELESTITE_CLUSTER);
+        directionalBlock(ModBlocks.SMALL_CELESTITE_BUD.get(), models().cross(getName(ModBlocks.SMALL_CELESTITE_BUD), blockLoc(ModBlocks.SMALL_CELESTITE_BUD)).renderType("cutout"));
+        directionalBlock(ModBlocks.MEDIUM_CELESTITE_BUD.get(), models().cross(getName(ModBlocks.MEDIUM_CELESTITE_BUD), blockLoc(ModBlocks.MEDIUM_CELESTITE_BUD)).renderType("cutout"));
+        directionalBlock(ModBlocks.LARGE_CELESTITE_BUD.get(), models().cross(getName(ModBlocks.LARGE_CELESTITE_BUD), blockLoc(ModBlocks.LARGE_CELESTITE_BUD)).renderType("cutout"));
+        directionalBlock(ModBlocks.CELESTITE_CLUSTER.get(), models().cross(getName(ModBlocks.CELESTITE_CLUSTER), blockLoc(ModBlocks.CELESTITE_CLUSTER)).renderType("cutout"));
 
 
+    }
+
+    public String getName(Supplier<? extends Block> block) {
+        return block.get().builtInRegistryHolder().key().location().getPath();
+    }
+    public ResourceLocation blockLoc(Supplier<? extends Block> block) {
+        return new ResourceLocation(DwarvenRunecraft.MOD_ID, "block/" + getName(block));
     }
 
 
