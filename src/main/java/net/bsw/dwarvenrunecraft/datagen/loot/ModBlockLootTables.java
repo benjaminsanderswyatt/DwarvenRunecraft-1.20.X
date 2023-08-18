@@ -26,6 +26,30 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.dropSelf(ModBlocks.CELESTITE_BLOCK.get());
 
+
+        this.dropSelf(ModBlocks.CALCITE_STAIRS.get());
+        this.dropSelf(ModBlocks.CALCITE_SLAB.get());
+        this.dropSelf(ModBlocks.CALCITE_WALL.get());
+
+        this.dropSelf(ModBlocks.POLISHED_CALCITE.get());
+        this.dropSelf(ModBlocks.POLISHED_CALCITE_STAIRS.get());
+        this.dropSelf(ModBlocks.POLISHED_CALCITE_SLAB.get());
+        this.dropSelf(ModBlocks.POLISHED_CALCITE_WALL.get());
+
+        this.dropSelf(ModBlocks.DARK_CALCITE.get());
+        this.dropSelf(ModBlocks.DARK_CALCITE_STAIRS.get());
+        this.dropSelf(ModBlocks.DARK_CALCITE_SLAB.get());
+        this.dropSelf(ModBlocks.DARK_CALCITE_WALL.get());
+
+        this.dropSelf(ModBlocks.POLISHED_DARK_CALCITE.get());
+        this.dropSelf(ModBlocks.POLISHED_DARK_CALCITE_STAIRS.get());
+        this.dropSelf(ModBlocks.POLISHED_DARK_CALCITE_SLAB.get());
+        this.dropSelf(ModBlocks.POLISHED_DARK_CALCITE_WALL.get());
+
+
+        this.dropSelf(ModBlocks.GLOWING_GLASS.get());
+
+
         this.dropWhenSilkTouch(ModBlocks.SMALL_CELESTITE_BUD.get());
         this.dropWhenSilkTouch(ModBlocks.MEDIUM_CELESTITE_BUD.get());
         this.dropWhenSilkTouch(ModBlocks.LARGE_CELESTITE_BUD.get());

@@ -36,7 +36,7 @@ public class TransformationDustItem extends Item {
         double z = pContext.getClickedPos().getZ();
 
         Block targetedBlock = (pContext.getLevel().getBlockState(BlockPos.containing(x, y, z))).getBlock();
-        String targetedBlockName = targetedBlock.getDescriptionId().substring(targetedBlock.getDescriptionId().lastIndexOf(".")+1);
+        String targetedBlockName = targetedBlock.getDescriptionId().substring(targetedBlock.getDescriptionId().lastIndexOf('.')+1);
 
         if (targetedBlock == Blocks.STONE || targetedBlock == Blocks.DEEPSLATE || targetedBlock == Blocks.NETHERRACK){
             BlockState rndOre = Blocks.AIR.defaultBlockState();

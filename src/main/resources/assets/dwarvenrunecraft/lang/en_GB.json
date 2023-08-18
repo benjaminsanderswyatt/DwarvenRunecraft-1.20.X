@@ -8,6 +8,31 @@
   "item.dwarvenrunecraft.celestite_shard": "Celestite Shard",
 
   "block.dwarvenrunecraft.celestite_block": "Block of Celestite",
+
+
+  "block.dwarvenrunecraft.calcite_stairs": "Calcite Stairs",
+  "block.dwarvenrunecraft.calcite_slab": "Calcite Slab",
+  "block.dwarvenrunecraft.calcite_wall": "Calcite Wall",
+
+  "block.dwarvenrunecraft.polished_calcite": "Polished Calcite",
+  "block.dwarvenrunecraft.polished_calcite_stairs": "Polished Calcite Stairs",
+  "block.dwarvenrunecraft.polished_calcite_slab": "Polished Calcite Slab",
+  "block.dwarvenrunecraft.polished_calcite_wall": "Polished Calcite Wall",
+
+  "block.dwarvenrunecraft.dark_calcite": "Dark Calcite",
+  "block.dwarvenrunecraft.dark_celestite_block": "Block of Dark Calcite",
+  "block.dwarvenrunecraft.dark_calcite_stairs": "Dark Calcite Stairs",
+  "block.dwarvenrunecraft.dark_calcite_slab": "Dark Calcite Slab",
+  "block.dwarvenrunecraft.dark_calcite_wall": "Dark Calcite Wall",
+
+  "block.dwarvenrunecraft.polished_dark_calcite": "Polished Dark Calcite",
+  "block.dwarvenrunecraft.polished_dark_calcite_stairs": "Polished Dark Calcite Stairs",
+  "block.dwarvenrunecraft.polished_dark_calcite_slab": "Polished Dark Calcite Slab",
+  "block.dwarvenrunecraft.polished_dark_calcite_wall": "Polished Dark Calcite Wall",
+
+
+  "block.dwarvenrunecraft.glowing_glass": "Glowing Glass",
+
   "block.dwarvenrunecraft.budding_celestite": "Budding Celestite",
 
   "block.dwarvenrunecraft.small_celestite_bud": "Small Celestite Bud",

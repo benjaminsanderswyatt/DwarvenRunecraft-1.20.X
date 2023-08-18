@@ -41,5 +41,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         //this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
         //        .add(ModBlocks..get());
 
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.CALCITE_WALL.get())
+                .add(ModBlocks.POLISHED_CALCITE_WALL.get())
+                .add(ModBlocks.DARK_CALCITE_WALL.get())
+                .add(ModBlocks.POLISHED_DARK_CALCITE_WALL.get());
+
+
+
+
     }
 }

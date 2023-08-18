@@ -18,27 +18,48 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ORE_SCANNER.get())) //creative mode icon
                     .title(Component.translatable("creativetab.dwarvenrunecraft_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                        //add items to creative tab
+
 
                         pOutput.accept(ModItems.ORE_SCANNER.get());
 
                         pOutput.accept(ModItems.CELESTITE_SHARD.get());
-
-
-
-
-                        pOutput.accept(ModItems.TRANSFORMATION_DUST.get());
-
-                        //add blocks to creative tab
-
                         pOutput.accept(ModBlocks.CELESTITE_BLOCK.get());
-
                         pOutput.accept(ModBlocks.BUDDING_CELESTITE.get());
 
                         pOutput.accept(ModBlocks.SMALL_CELESTITE_BUD.get());
                         pOutput.accept(ModBlocks.MEDIUM_CELESTITE_BUD.get());
                         pOutput.accept(ModBlocks.LARGE_CELESTITE_BUD.get());
                         pOutput.accept(ModBlocks.CELESTITE_CLUSTER.get());
+
+                        pOutput.accept(ModBlocks.CALCITE_STAIRS.get());
+                        pOutput.accept(ModBlocks.CALCITE_SLAB.get());
+                        pOutput.accept(ModBlocks.CALCITE_WALL.get());
+
+                        pOutput.accept(ModBlocks.POLISHED_CALCITE.get());
+                        pOutput.accept(ModBlocks.POLISHED_CALCITE_STAIRS.get());
+                        pOutput.accept(ModBlocks.POLISHED_CALCITE_SLAB.get());
+                        pOutput.accept(ModBlocks.POLISHED_CALCITE_WALL.get());
+
+                        pOutput.accept(ModBlocks.DARK_CALCITE.get());
+                        pOutput.accept(ModBlocks.DARK_CALCITE_STAIRS.get());
+                        pOutput.accept(ModBlocks.DARK_CALCITE_SLAB.get());
+                        pOutput.accept(ModBlocks.DARK_CALCITE_WALL.get());
+
+                        pOutput.accept(ModBlocks.POLISHED_DARK_CALCITE.get());
+                        pOutput.accept(ModBlocks.POLISHED_DARK_CALCITE_STAIRS.get());
+                        pOutput.accept(ModBlocks.POLISHED_DARK_CALCITE_SLAB.get());
+                        pOutput.accept(ModBlocks.POLISHED_DARK_CALCITE_WALL.get());
+
+                        pOutput.accept(ModBlocks.GLOWING_GLASS.get());
+
+                        pOutput.accept(ModItems.TRANSFORMATION_DUST.get());
+
+
+
+
+
+
+
 
                     })
                     .build());

@@ -4,11 +4,12 @@ import net.bsw.dwarvenrunecraft.DwarvenRunecraft;
 import net.bsw.dwarvenrunecraft.block.custom.BuddingCelestiteBlock;
 import net.bsw.dwarvenrunecraft.block.custom.CelestiteClusterBlock;
 import net.bsw.dwarvenrunecraft.item.ModItems;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,6 +26,52 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CELESTITE_BLOCK = registerBlock("celestite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
+
+
+
+    public static final RegistryObject<Block> CALCITE_STAIRS = registerBlock("calcite_stairs",
+            () -> new StairBlock(() -> Blocks.CALCITE.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+    public static final RegistryObject<Block> CALCITE_SLAB = registerBlock("calcite_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+    public static final RegistryObject<Block> CALCITE_WALL = registerBlock("calcite_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+
+    public static final RegistryObject<Block> POLISHED_CALCITE = registerBlock("polished_calcite",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+    public static final RegistryObject<Block> POLISHED_CALCITE_STAIRS = registerBlock("polished_calcite_stairs",
+            () -> new StairBlock(() -> ModBlocks.POLISHED_CALCITE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+    public static final RegistryObject<Block> POLISHED_CALCITE_SLAB = registerBlock("polished_calcite_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+    public static final RegistryObject<Block> POLISHED_CALCITE_WALL = registerBlock("polished_calcite_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+
+    public static final RegistryObject<Block> DARK_CALCITE = registerBlock("dark_calcite",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+    public static final RegistryObject<Block> DARK_CALCITE_STAIRS = registerBlock("dark_calcite_stairs",
+            () -> new StairBlock(() -> ModBlocks.DARK_CALCITE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+    public static final RegistryObject<Block> DARK_CALCITE_SLAB = registerBlock("dark_calcite_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+    public static final RegistryObject<Block> DARK_CALCITE_WALL = registerBlock("dark_calcite_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+
+    public static final RegistryObject<Block> POLISHED_DARK_CALCITE = registerBlock("polished_dark_calcite",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+    public static final RegistryObject<Block> POLISHED_DARK_CALCITE_STAIRS = registerBlock("polished_dark_calcite_stairs",
+            () -> new StairBlock(() -> ModBlocks.POLISHED_DARK_CALCITE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+    public static final RegistryObject<Block> POLISHED_DARK_CALCITE_SLAB = registerBlock("polished_dark_calcite_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+    public static final RegistryObject<Block> POLISHED_DARK_CALCITE_WALL = registerBlock("polished_dark_calcite_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+
+
+
+    public static final RegistryObject<Block> GLOWING_GLASS = registerBlock("glowing_glass",
+            () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion().lightLevel((p_60929_) ->{return 15;} )));
+
 
 
 
@@ -45,6 +92,8 @@ public class ModBlocks {
             () -> new CelestiteClusterBlock(7, 3,
                     BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().sound(SoundType.AMETHYST).strength(3F).
                             lightLevel( (p_60929_) ->{return 8;} )));
+
+
 
 
 
