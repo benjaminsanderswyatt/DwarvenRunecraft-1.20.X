@@ -4,6 +4,16 @@
   "item.dwarvenrunecraft.ore_scanner": "Ore Scanner",
   "tooltip.dwarvenrunecraft.ore_scanner.tooltip": "Right click and find stuff",
 
+  "item.dwarvenrunecraft.item_magnet": "Item Magnet",
+  "tooltip.dwarvenrunecraft.item_magnet.tooltip": "You start to feel very attractive",
+
+  "item.dwarvenrunecraft.spectre_glass": "Spectre Glass",
+  "tooltip.dwarvenrunecraft.spectre_glass.tooltip": "I see your souls",
+
+
+  "item.dwarvenrunecraft.beer": "Beer",
+
+
 
   "item.dwarvenrunecraft.celestite_shard": "Celestite Shard",
 
@@ -47,8 +57,18 @@
   "tooltip.dwarvenrunecraft.transformation_dust.tooltip": "Right click on stone for some dwarven luck",
 
 
+  "effect.dwarvenrunecraft.coloured_glowing": "Coloured Glowing",
+  "item.minecraft.potion.effect.coloured_potion": "Coloured Glowing Potion",
+  "item.minecraft.splash_potion.effect.coloured_potion": "Splash Potion of Coloured Glowing",
+  "item.minecraft.lingering_potion.effect.coloured_potion": "Lingering Potion of Coloured Glowing",
 
 
+
+
+
+
+  "key.category.dwarvenrunecraft.key": "Dwarven Runecraft Mod",
+  "key.dwarvenrunecraft.soul_inventory": "Open Soul Inventory",
 
   "creativetab.dwarvenrunecraft_tab": "Dwarven Runecraft"
 }

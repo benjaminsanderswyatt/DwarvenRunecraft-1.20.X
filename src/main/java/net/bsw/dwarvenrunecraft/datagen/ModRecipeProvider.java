@@ -1,19 +1,13 @@
 package net.bsw.dwarvenrunecraft.datagen;
 
-import net.bsw.dwarvenrunecraft.DwarvenRunecraft;
 import net.bsw.dwarvenrunecraft.block.ModBlocks;
 import net.bsw.dwarvenrunecraft.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-import org.lwjgl.system.macosx.MacOSXLibraryDL;
 
-import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
@@ -29,6 +23,36 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //Celestite Shard -> Celestite Block
         twoByTwoPacker(pWriter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CELESTITE_BLOCK.get(), ModItems.CELESTITE_SHARD.get());
+
+
+
+
+
+
+        //Glass + 4x Celestite Shard -> Glowing Glass
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLOWING_GLASS.get(), 2)
+                .pattern(" C ")
+                .pattern("CGC")
+                .pattern(" C ")
+                .define('C', ModItems.CELESTITE_SHARD.get())
+                .define('G', Items.GLASS)
+                .unlockedBy(getHasName(ModItems.CELESTITE_SHARD.get()), has(Items.GLASS))
+                .save(pWriter);
+
+
+
+        //Glowing Glass + 4x Gold Ingots -> Spectre Glass
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SPECTRE_GLASS.get())
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern(" I ")
+                .define('I', Items.GOLD_INGOT)
+                .define('G', ModBlocks.GLOWING_GLASS.get())
+                .unlockedBy(getHasName(ModBlocks.GLOWING_GLASS.get()), has(Items.GOLD_INGOT))
+                .save(pWriter);
+
+
+
 
 
 
@@ -63,20 +87,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         slabBuilder(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DARK_CALCITE_SLAB.get(), Ingredient.of(ModBlocks.POLISHED_DARK_CALCITE.get())).unlockedBy(getHasName(ModBlocks.POLISHED_DARK_CALCITE.get()), has(ModBlocks.POLISHED_DARK_CALCITE.get())).save(pWriter);
         //Polished Dark Calcite -> Polished Dark Calcite Wall
         wallBuilder(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DARK_CALCITE_WALL.get(), Ingredient.of(ModBlocks.POLISHED_DARK_CALCITE.get())).unlockedBy(getHasName(ModBlocks.POLISHED_DARK_CALCITE.get()), has(ModBlocks.POLISHED_DARK_CALCITE.get())).save(pWriter);
-
-
-
-
-        //Glass + 4x Celestite Shard -> Glowing Glass
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLOWING_GLASS.get(), 2)
-                .pattern(" C ")
-                .pattern("CGC")
-                .pattern(" C ")
-                .define('C', ModItems.CELESTITE_SHARD.get())
-                .define('G', Items.GLASS)
-                .unlockedBy(getHasName(ModItems.CELESTITE_SHARD.get()), has(Items.GLASS))
-                .save(pWriter);
-
 
 
 

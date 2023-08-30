@@ -2,10 +2,8 @@ package net.bsw.dwarvenrunecraft.datagen;
 
 import net.bsw.dwarvenrunecraft.DwarvenRunecraft;
 import net.bsw.dwarvenrunecraft.block.ModBlocks;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;

@@ -53,9 +53,11 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.GLOWING_GLASS.get());
 
                         pOutput.accept(ModItems.TRANSFORMATION_DUST.get());
+                        pOutput.accept(ModItems.ITEM_MAGNET.get());
+                        pOutput.accept(ModItems.SPECTRE_GLASS.get());
 
 
-
+                        pOutput.accept(ModItems.BEER.get());
 
 
 

@@ -3,14 +3,9 @@ package net.bsw.dwarvenrunecraft.datagen;
 import net.bsw.dwarvenrunecraft.DwarvenRunecraft;
 import net.bsw.dwarvenrunecraft.block.ModBlocks;
 import net.bsw.dwarvenrunecraft.item.ModItems;
-import net.minecraft.core.Registry;
-import net.minecraft.core.RegistryAccess;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.RegistryDataLoader;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
@@ -35,6 +30,13 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 
         simpleItem(ModItems.TRANSFORMATION_DUST);
+
+
+        simpleItem(ModItems.ITEM_MAGNET);
+
+        simpleItem(ModItems.SPECTRE_GLASS);
+
+        simpleItem(ModItems.BEER);
 
 
 

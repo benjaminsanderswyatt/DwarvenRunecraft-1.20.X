@@ -2,11 +2,18 @@ package net.bsw.dwarvenrunecraft;
 
 import com.mojang.logging.LogUtils;
 import net.bsw.dwarvenrunecraft.block.ModBlocks;
+import net.bsw.dwarvenrunecraft.effect.ModEffects;
+import net.bsw.dwarvenrunecraft.entities.ModEntityTypes;
 import net.bsw.dwarvenrunecraft.item.ModCreativeModeTabs;
 import net.bsw.dwarvenrunecraft.item.ModItems;
+import net.bsw.dwarvenrunecraft.loot.ModLootModifiers;
+import net.bsw.dwarvenrunecraft.potion.ModPotions;
+import net.bsw.dwarvenrunecraft.util.ImprovedBrewingRecipe;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -33,18 +40,38 @@ public class DwarvenRunecraft {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
+
+        ModEntityTypes.register(modEventBus);
+
+
 
         modEventBus.addListener(this::commonSetup);
 
+
+
+
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
+        modEventBus.addListener(this::commonSetup);
     }
+
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+
+            BrewingRecipeRegistry.addRecipe(new ImprovedBrewingRecipe(Potions.THICK, ModItems.CELESTITE_SHARD.get(), ModPotions.COLOURED_GLOWING.get()));
+
+
+        });
+
 
     }
 
-    // Add the example block item to the building blocks tab
+    // Add the example block item to the ingredients blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
         }

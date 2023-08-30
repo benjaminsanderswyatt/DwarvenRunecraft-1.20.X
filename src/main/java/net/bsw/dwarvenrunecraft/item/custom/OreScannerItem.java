@@ -42,6 +42,19 @@ public class OreScannerItem extends Item {
 
                             System.out.println(block);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
                         }
                     }
                 }

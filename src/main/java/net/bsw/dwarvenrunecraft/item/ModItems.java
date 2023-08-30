@@ -1,8 +1,7 @@
 package net.bsw.dwarvenrunecraft.item;
 
 import net.bsw.dwarvenrunecraft.DwarvenRunecraft;
-import net.bsw.dwarvenrunecraft.item.custom.OreScannerItem;
-import net.bsw.dwarvenrunecraft.item.custom.TransformationDustItem;
+import net.bsw.dwarvenrunecraft.item.custom.*;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -33,6 +32,18 @@ public class ModItems {
 
     public static final RegistryObject<Item> TRANSFORMATION_DUST = ITEMS.register("transformation_dust",
             () -> new TransformationDustItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> ITEM_MAGNET = ITEMS.register("item_magnet",
+            () -> new ItemMagnetItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> SPECTRE_GLASS = ITEMS.register("spectre_glass",
+            () -> new SpectreGlassItem(new Item.Properties().stacksTo(1)));
+
+
+
+    public static final RegistryObject<Item> BEER = ITEMS.register("beer",
+            () -> new Item(new Item.Properties().food(ModFoods.BEER)));
+
 
 
 
