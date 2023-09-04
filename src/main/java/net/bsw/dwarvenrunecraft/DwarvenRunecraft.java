@@ -2,6 +2,7 @@ package net.bsw.dwarvenrunecraft;
 
 import com.mojang.logging.LogUtils;
 import net.bsw.dwarvenrunecraft.block.ModBlocks;
+import net.bsw.dwarvenrunecraft.datagen.ModWorldGenProvider;
 import net.bsw.dwarvenrunecraft.effect.ModEffects;
 import net.bsw.dwarvenrunecraft.entities.ModEntityTypes;
 import net.bsw.dwarvenrunecraft.item.ModCreativeModeTabs;
@@ -9,6 +10,8 @@ import net.bsw.dwarvenrunecraft.item.ModItems;
 import net.bsw.dwarvenrunecraft.loot.ModLootModifiers;
 import net.bsw.dwarvenrunecraft.potion.ModPotions;
 import net.bsw.dwarvenrunecraft.util.ImprovedBrewingRecipe;
+import net.bsw.dwarvenrunecraft.world.ModConfiguredFeatures;
+import net.bsw.dwarvenrunecraft.world.ModPlacedFeatures;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.api.distmarker.Dist;
@@ -46,6 +49,8 @@ public class DwarvenRunecraft {
         ModLootModifiers.register(modEventBus);
 
         ModEntityTypes.register(modEventBus);
+
+
 
 
 
