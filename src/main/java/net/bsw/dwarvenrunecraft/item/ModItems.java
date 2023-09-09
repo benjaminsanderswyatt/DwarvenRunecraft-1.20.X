@@ -1,8 +1,11 @@
 package net.bsw.dwarvenrunecraft.item;
 
 import net.bsw.dwarvenrunecraft.DwarvenRunecraft;
+import net.bsw.dwarvenrunecraft.fluid.ModFluids;
 import net.bsw.dwarvenrunecraft.item.custom.*;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -46,6 +49,11 @@ public class ModItems {
 
 
 
+
+    //Fluid Bucket Items
+    public static final RegistryObject<Item> CRYSTAL_ICHOR_BUCKET = ITEMS.register("crystal_ichor_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_CRYSTAL_ICHOR,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

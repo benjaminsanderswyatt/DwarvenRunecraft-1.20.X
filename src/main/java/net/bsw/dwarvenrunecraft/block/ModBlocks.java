@@ -3,6 +3,7 @@ package net.bsw.dwarvenrunecraft.block;
 import net.bsw.dwarvenrunecraft.DwarvenRunecraft;
 import net.bsw.dwarvenrunecraft.block.custom.BuddingCelestiteBlock;
 import net.bsw.dwarvenrunecraft.block.custom.CelestiteClusterBlock;
+import net.bsw.dwarvenrunecraft.fluid.ModFluids;
 import net.bsw.dwarvenrunecraft.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -92,7 +93,9 @@ public class ModBlocks {
 
 
 
-
+    //Fluid blocks
+    public static final RegistryObject<LiquidBlock> CRYSTAL_ICHOR_BLOCK = BLOCKS.register("crystal_ichor_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_CRYSTAL_ICHOR, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
 
 
 

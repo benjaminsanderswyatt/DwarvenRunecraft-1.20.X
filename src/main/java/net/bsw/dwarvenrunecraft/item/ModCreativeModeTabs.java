@@ -60,8 +60,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.BEER.get());
 
 
-
-
+                        //Fluid buckets
+                        pOutput.accept(ModItems.CRYSTAL_ICHOR_BUCKET.get());
 
                     })
                     .build());

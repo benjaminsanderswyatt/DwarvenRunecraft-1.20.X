@@ -5,6 +5,8 @@ import net.bsw.dwarvenrunecraft.block.ModBlocks;
 import net.bsw.dwarvenrunecraft.datagen.ModWorldGenProvider;
 import net.bsw.dwarvenrunecraft.effect.ModEffects;
 import net.bsw.dwarvenrunecraft.entities.ModEntityTypes;
+import net.bsw.dwarvenrunecraft.fluid.ModFluidTypes;
+import net.bsw.dwarvenrunecraft.fluid.ModFluids;
 import net.bsw.dwarvenrunecraft.item.ModCreativeModeTabs;
 import net.bsw.dwarvenrunecraft.item.ModItems;
 import net.bsw.dwarvenrunecraft.loot.ModLootModifiers;
@@ -12,6 +14,8 @@ import net.bsw.dwarvenrunecraft.potion.ModPotions;
 import net.bsw.dwarvenrunecraft.util.ImprovedBrewingRecipe;
 import net.bsw.dwarvenrunecraft.world.ModConfiguredFeatures;
 import net.bsw.dwarvenrunecraft.world.ModPlacedFeatures;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.api.distmarker.Dist;
@@ -51,6 +55,8 @@ public class DwarvenRunecraft {
         ModEntityTypes.register(modEventBus);
 
 
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
 
 
 
@@ -93,6 +99,9 @@ public class DwarvenRunecraft {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_CRYSTAL_ICHOR.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_CRSTAL_ICHOR.get(), RenderType.translucent());
 
         }
     }
