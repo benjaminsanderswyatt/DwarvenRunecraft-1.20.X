@@ -13,7 +13,9 @@
 
   "item.dwarvenrunecraft.beer": "Beer",
 
-  "item.dwarvenrunecraft.crystal_ichor_bucket": "Crystal Ichor Bucket",
+  "item.dwarvenrunecraft.unstable_crystal_ichor_bucket": "Unstable Crystal Ichor Bucket",
+  "item.dwarvenrunecraft.pure_laguz_bucket": "Pure Laguz Bucket",
+  "item.dwarvenrunecraft.eitr_bucket": "Eitr Bucket",
 
 
 
@@ -63,6 +65,13 @@
   "item.minecraft.potion.effect.coloured_potion": "Coloured Glowing Potion",
   "item.minecraft.splash_potion.effect.coloured_potion": "Splash Potion of Coloured Glowing",
   "item.minecraft.lingering_potion.effect.coloured_potion": "Lingering Potion of Coloured Glowing",
+  "item.minecraft.tipped_arrow.effect.coloured_potion": "Tipped Colourful Arrow",
+
+
+
+  "item.dwarvenrunecraft.unstable_crystal_ichor_bucket": "Bucket of Unstable Crystal Ichor",
+  "item.dwarvenrunecraft.pure_laguz_bucket": "Bucket of Pure Laguz",
+  "item.dwarvenrunecraft.eitr_bucket": "Bucket of Eiter",
 
 
 

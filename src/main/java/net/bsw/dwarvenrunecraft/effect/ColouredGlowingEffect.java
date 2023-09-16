@@ -2,21 +2,31 @@ package net.bsw.dwarvenrunecraft.effect;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.BossEvent;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.PlayerRideable;
+import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.ambient.AmbientCreature;
+import net.minecraft.world.entity.animal.AbstractGolem;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.animal.WaterAnimal;
+import net.minecraft.world.entity.animal.allay.Allay;
+import net.minecraft.world.entity.animal.horse.AbstractHorse;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
+import net.minecraft.world.entity.boss.wither.WitherBoss;
+import net.minecraft.world.entity.monster.*;
+import net.minecraft.world.entity.monster.piglin.PiglinBrute;
+import net.minecraft.world.entity.monster.warden.Warden;
 import net.minecraft.world.entity.npc.Npc;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.phys.AABB;
 import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.scores.Scoreboard;
 
-import java.util.List;
+import java.util.Objects;
 
 public class ColouredGlowingEffect extends MobEffect {
 
@@ -27,55 +37,87 @@ public class ColouredGlowingEffect extends MobEffect {
     @Override
     public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
 
-        int range = 50;
+        if (!pLivingEntity.level().isClientSide) {
 
-        int i = pLivingEntity.getEffect(this).getDuration();
+            int range = 50;
 
-        if (!pLivingEntity.getCommandSenderWorld().isClientSide()) {
+            int i = pLivingEntity.getEffect(this).getDuration();
+
             Scoreboard scoreboard = pLivingEntity.getCommandSenderWorld().getServer().getScoreboard();
 
-            PlayerTeam teamHostile = createTeam(scoreboard, "Hostile", ChatFormatting.RED);
-            PlayerTeam teamPassive = createTeam(scoreboard, "Passive", ChatFormatting.GREEN);
-            PlayerTeam teamNpc = createTeam(scoreboard, "Npc", ChatFormatting.YELLOW);
-            PlayerTeam teamPlayer = createTeam(scoreboard, "Player", ChatFormatting.BLUE);
+
             PlayerTeam teamMisc = createTeam(scoreboard, "Misc", ChatFormatting.BLACK);
 
+            PlayerTeam teamBoss = createTeam(scoreboard,"Boss", ChatFormatting.DARK_RED);
+            PlayerTeam teamPlayer = createTeam(scoreboard,"Player", ChatFormatting.LIGHT_PURPLE);
+            PlayerTeam teamNpc = createTeam(scoreboard,"Npc", ChatFormatting.YELLOW);
+            PlayerTeam teamGolem = createTeam(scoreboard,"Golem", ChatFormatting.GOLD);
+            PlayerTeam teamRideable = createTeam(scoreboard,"Rideable", ChatFormatting.DARK_GREEN);
+            PlayerTeam teamPet = createTeam(scoreboard,"Pet", ChatFormatting.DARK_PURPLE);
+            PlayerTeam teamHostile = createTeam(scoreboard,"Hostile", ChatFormatting.RED);
+            PlayerTeam teamPassive = createTeam(scoreboard,"Passive", ChatFormatting.GREEN);
+            PlayerTeam teamWater = createTeam(scoreboard,"Water", ChatFormatting.BLUE);
 
-            AABB area = new AABB(pLivingEntity.position().add(-range, -range, -range), pLivingEntity.position().add(range, range, range));
+            PlayerTeam team = teamMisc;
 
-            List<LivingEntity> mobs = pLivingEntity.level().getEntitiesOfClass(LivingEntity.class, area);
 
-            for (LivingEntity mob : mobs) {
-
-                PlayerTeam team = teamMisc;
-
-                if (mob instanceof Monster) {
-                    team = teamHostile;
-                } else if (mob instanceof Animal || mob instanceof AmbientCreature) {
-                    team = teamPassive;
-                } else if (mob instanceof Npc) {
-                    team = teamNpc;
-                } else if (mob instanceof Player) {
-                    team = teamPlayer;
-                }
-
-                scoreboard.addPlayerToTeam(mob.getScoreboardName(), team);
-
-                mob.addEffect(new MobEffectInstance(MobEffects.GLOWING, 5, 0, false, false));
+            if (pLivingEntity instanceof ElderGuardian ||
+                    pLivingEntity instanceof Warden ||
+                    pLivingEntity instanceof PiglinBrute){
+                //boss
+                team = teamBoss;
+            } else if (pLivingEntity instanceof Player){
+                //player
+                team = teamPlayer;
+            } else if (pLivingEntity instanceof Npc) {
+                //npc
+                team = teamNpc;
+            } else if (pLivingEntity instanceof AbstractGolem && !(pLivingEntity instanceof Shulker)) {
+                //Golem
+                team = teamGolem;
+            } else if (pLivingEntity instanceof PlayerRideable) {
+                //ridables
+                team = teamRideable;
+            } else if (pLivingEntity instanceof TamableAnimal ||
+                    pLivingEntity instanceof Allay) {
+                //Pets
+                team = teamPet;
+            } else if (pLivingEntity instanceof Monster ||
+                    pLivingEntity instanceof Slime ||
+                    pLivingEntity instanceof Phantom ||
+                    pLivingEntity instanceof Ghast ||
+                    pLivingEntity instanceof Shulker) {
+                //hostile
+                team = teamHostile;
+            } else if (pLivingEntity instanceof Animal ||
+                    pLivingEntity instanceof AmbientCreature) {
+                //passive
+                team = teamPassive;
+            } else if (pLivingEntity instanceof WaterAnimal) {
+                //water
+                team = teamWater;
             }
 
+            scoreboard.addPlayerToTeam(pLivingEntity.getScoreboardName(), team);
+
+            pLivingEntity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 5, 0, false, false));
+
+
             if (i <= 0) {
+                removeTeam(scoreboard, teamBoss);
+                removeTeam(scoreboard, teamPlayer);
+                removeTeam(scoreboard, teamNpc);
+                removeTeam(scoreboard, teamGolem);
+                removeTeam(scoreboard, teamRideable);
+                removeTeam(scoreboard, teamPet);
                 removeTeam(scoreboard, teamHostile);
                 removeTeam(scoreboard, teamPassive);
-                removeTeam(scoreboard, teamNpc);
-                removeTeam(scoreboard, teamPlayer);
+                removeTeam(scoreboard, teamWater);
                 removeTeam(scoreboard, teamMisc);
             }
 
 
         }
-
-
     }
 
     @Override

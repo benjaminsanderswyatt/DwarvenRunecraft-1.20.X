@@ -51,9 +51,23 @@ public class ModItems {
 
 
     //Fluid Bucket Items
-    public static final RegistryObject<Item> CRYSTAL_ICHOR_BUCKET = ITEMS.register("crystal_ichor_bucket",
-            () -> new BucketItem(ModFluids.SOURCE_CRYSTAL_ICHOR,
+    public static final RegistryObject<Item> UNSTABLE_CRYSTAL_ICHOR_BUCKET = ITEMS.register("unstable_crystal_ichor_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_UNSTABLE_CRYSTAL_ICHOR,
                     new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> PURE_LAGUZ_BUCKET = ITEMS.register("pure_laguz_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_PURE_LAGUZ,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> EITR_BUCKET = ITEMS.register("eitr_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_EITR,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
+
+
+
+
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

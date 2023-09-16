@@ -2,6 +2,7 @@ package net.bsw.dwarvenrunecraft.item;
 
 import net.bsw.dwarvenrunecraft.DwarvenRunecraft;
 import net.bsw.dwarvenrunecraft.block.ModBlocks;
+import net.bsw.dwarvenrunecraft.potion.ModPotions;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -61,7 +62,9 @@ public class ModCreativeModeTabs {
 
 
                         //Fluid buckets
-                        pOutput.accept(ModItems.CRYSTAL_ICHOR_BUCKET.get());
+                        pOutput.accept(ModItems.UNSTABLE_CRYSTAL_ICHOR_BUCKET.get());
+                        pOutput.accept(ModItems.PURE_LAGUZ_BUCKET.get());
+                        pOutput.accept(ModItems.EITR_BUCKET.get());
 
                     })
                     .build());

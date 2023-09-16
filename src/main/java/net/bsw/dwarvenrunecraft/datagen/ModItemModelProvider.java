@@ -39,7 +39,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.BEER);
 
         //Fluid Bucket
-        simpleItem(ModItems.CRYSTAL_ICHOR_BUCKET);
+        simpleItem(ModItems.UNSTABLE_CRYSTAL_ICHOR_BUCKET);
+        simpleItem(ModItems.PURE_LAGUZ_BUCKET);
+        simpleItem(ModItems.EITR_BUCKET);
 
 
 

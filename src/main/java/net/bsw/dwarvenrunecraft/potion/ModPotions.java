@@ -16,8 +16,7 @@ public class ModPotions {
     //Add potions here
 
     public static final RegistryObject<Potion> COLOURED_GLOWING = POTIONS.register("coloured_potion",
-            () -> new Potion(new MobEffectInstance(ModEffects.COLOURED_GLOWING.get(), 200, 0)));
-
+            () -> new Potion(new MobEffectInstance(ModEffects.COLOURED_GLOWING.get(), 180*20, 0)));
 
 
     public static void register(IEventBus eventBus) {

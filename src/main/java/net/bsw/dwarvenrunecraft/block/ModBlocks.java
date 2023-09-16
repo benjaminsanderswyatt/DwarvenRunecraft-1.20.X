@@ -3,6 +3,8 @@ package net.bsw.dwarvenrunecraft.block;
 import net.bsw.dwarvenrunecraft.DwarvenRunecraft;
 import net.bsw.dwarvenrunecraft.block.custom.BuddingCelestiteBlock;
 import net.bsw.dwarvenrunecraft.block.custom.CelestiteClusterBlock;
+import net.bsw.dwarvenrunecraft.block.custom.fluid.EitrFluidBlock;
+import net.bsw.dwarvenrunecraft.block.custom.fluid.PureLaguzBlock;
 import net.bsw.dwarvenrunecraft.fluid.ModFluids;
 import net.bsw.dwarvenrunecraft.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -94,8 +96,15 @@ public class ModBlocks {
 
 
     //Fluid blocks
-    public static final RegistryObject<LiquidBlock> CRYSTAL_ICHOR_BLOCK = BLOCKS.register("crystal_ichor_block",
-            () -> new LiquidBlock(ModFluids.SOURCE_CRYSTAL_ICHOR, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
+    public static final RegistryObject<LiquidBlock> UNSTABLE_CRYSTAL_ICHOR_BLOCK = BLOCKS.register("crystal_ichor_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_UNSTABLE_CRYSTAL_ICHOR, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
+
+    public static final RegistryObject<LiquidBlock> PURE_LAGUZ_BLOCK = BLOCKS.register("pure_laguz_block",
+            () -> new PureLaguzBlock(ModFluids.SOURCE_PURE_LAGUZ.get(), BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
+
+    public static final RegistryObject<EitrFluidBlock> EITR_BLOCK = BLOCKS.register("eitr_block",
+            () -> new EitrFluidBlock(ModFluids.SOURCE_EITR.get(), BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
+
 
 
 
