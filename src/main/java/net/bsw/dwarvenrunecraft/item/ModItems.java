@@ -1,11 +1,14 @@
 package net.bsw.dwarvenrunecraft.item;
 
 import net.bsw.dwarvenrunecraft.DwarvenRunecraft;
+import net.bsw.dwarvenrunecraft.entities.ModEntityTypes;
 import net.bsw.dwarvenrunecraft.fluid.ModFluids;
 import net.bsw.dwarvenrunecraft.item.custom.*;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.SpawnEggItem;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -48,6 +51,11 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.BEER)));
 
 
+
+
+    //Spawn Eggs
+    public static final RegistryObject<ForgeSpawnEggItem> DWARF_SPAWN_EGG = ITEMS.register("dwarf_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.DWARF,0xFFFFFF,0xAE6EAE, new Item.Properties()));
 
 
     //Fluid Bucket Items

@@ -56,12 +56,9 @@ public class ItemMagnetItem extends Item {
                 toggleActive(player, itemstack);
 
                 if (isActivated(itemstack)) {
-                    System.out.println(itemstack.getOrCreateTag().getBoolean("active"));
-                    //random animation fun
-                    Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
+                    player.displayClientMessage(Component.translatable("tooltip.dwarvenrunecraft.item_magnet.active.tooltip"), true);
                 } else {
-                    System.out.println("else" + itemstack.getOrCreateTag().getBoolean("active"));
-
+                    player.displayClientMessage(Component.translatable("tooltip.dwarvenrunecraft.item_magnet.deactive.tooltip"), true);
                 }
             }
 
@@ -69,6 +66,9 @@ public class ItemMagnetItem extends Item {
 
         return magnet;
     }
+
+
+
 
     public void getRange(Entity player, ItemStack stack){
             stack.getOrCreateTag().putInt("range", range);
@@ -86,6 +86,26 @@ public class ItemMagnetItem extends Item {
         return stack.getOrCreateTag().getBoolean("active");
     }
 
+
+
+    @Override
+    public boolean onDroppedByPlayer(ItemStack stack, Player player) {
+        if(!player.level().isClientSide && isActivated(stack)){
+            boolean active = stack.getOrCreateTag().contains("active") && stack.getOrCreateTag().getBoolean("active");
+            stack.getOrCreateTag().putBoolean("active", false);
+        }
+        return true;
+    }
+
+
+    @Override
+    public boolean isFoil(ItemStack pStack) {
+        if (isActivated(pStack)){
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {

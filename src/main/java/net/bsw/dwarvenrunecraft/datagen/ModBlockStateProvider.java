@@ -53,6 +53,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         directionalBlock(ModBlocks.CELESTITE_CLUSTER.get(), models().cross(getName(ModBlocks.CELESTITE_CLUSTER), blockLoc(ModBlocks.CELESTITE_CLUSTER)).renderType("cutout"));
 
 
+
+
+
+        pressurePlateBlock(ModBlocks.LAUNCH_PAD.get(), blockLoc(ModBlocks.CELESTITE_BLOCK));
+
+
+
     }
 
     public String getName(Supplier<? extends Block> block) {

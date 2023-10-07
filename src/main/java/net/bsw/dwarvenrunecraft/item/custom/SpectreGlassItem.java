@@ -74,6 +74,16 @@ public class SpectreGlassItem extends Item {
         return stack.getOrCreateTag().getBoolean("active");
     }
 
+    @Override
+    public boolean isFoil(ItemStack pStack) {
+        if (isActivated(pStack)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
@@ -85,6 +95,8 @@ public class SpectreGlassItem extends Item {
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
+
+
 
 }
 

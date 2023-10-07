@@ -50,6 +50,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.GLOWING_GLASS.get());
 
 
+
+
+        this.dropSelf(ModBlocks.LAUNCH_PAD.get());
+
+
+
+
+
+
         this.dropWhenSilkTouch(ModBlocks.SMALL_CELESTITE_BUD.get());
         this.dropWhenSilkTouch(ModBlocks.MEDIUM_CELESTITE_BUD.get());
         this.dropWhenSilkTouch(ModBlocks.LARGE_CELESTITE_BUD.get());

@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -37,6 +38,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SPECTRE_GLASS);
 
         simpleItem(ModItems.BEER);
+
+
+
 
         //Fluid Bucket
         simpleItem(ModItems.UNSTABLE_CRYSTAL_ICHOR_BUCKET);
@@ -100,6 +104,9 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(DwarvenRunecraft.MOD_ID,"item/" + item.getId().getPath()));
     }
+
+
+
 
 
 }

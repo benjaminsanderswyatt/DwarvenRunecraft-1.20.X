@@ -3,6 +3,7 @@ package net.bsw.dwarvenrunecraft.block;
 import net.bsw.dwarvenrunecraft.DwarvenRunecraft;
 import net.bsw.dwarvenrunecraft.block.custom.BuddingCelestiteBlock;
 import net.bsw.dwarvenrunecraft.block.custom.CelestiteClusterBlock;
+import net.bsw.dwarvenrunecraft.block.custom.LaunchPadBlock;
 import net.bsw.dwarvenrunecraft.block.custom.fluid.EitrFluidBlock;
 import net.bsw.dwarvenrunecraft.block.custom.fluid.PureLaguzBlock;
 import net.bsw.dwarvenrunecraft.fluid.ModFluids;
@@ -11,6 +12,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -92,6 +94,12 @@ public class ModBlocks {
             () -> new CelestiteClusterBlock(7, 3,
                     BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().sound(SoundType.AMETHYST).strength(3F).
                             lightLevel( (p_60929_) ->{return 8;} )));
+
+
+
+    public static final RegistryObject<PressurePlateBlock> LAUNCH_PAD = registerBlock("launch_pad",
+            () -> new LaunchPadBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE)));
+
 
 
 

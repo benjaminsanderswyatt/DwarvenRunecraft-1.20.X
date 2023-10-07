@@ -4,6 +4,12 @@ import com.mojang.logging.LogUtils;
 import net.bsw.dwarvenrunecraft.block.ModBlocks;
 import net.bsw.dwarvenrunecraft.effect.ModEffects;
 import net.bsw.dwarvenrunecraft.entities.ModEntityTypes;
+import net.bsw.dwarvenrunecraft.entities.client.models.DwarfEntityModel;
+import net.bsw.dwarvenrunecraft.entities.client.models.IdentifierEntityModel;
+import net.bsw.dwarvenrunecraft.entities.client.renderer.DwarfEntityRenderer;
+import net.bsw.dwarvenrunecraft.entities.client.renderer.IdentifierEntityRenderer;
+import net.bsw.dwarvenrunecraft.entities.custom.DwarfEntity;
+import net.bsw.dwarvenrunecraft.entities.custom.IdentifierEntity;
 import net.bsw.dwarvenrunecraft.fluid.ModFluidTypes;
 import net.bsw.dwarvenrunecraft.fluid.ModFluids;
 import net.bsw.dwarvenrunecraft.item.ModCreativeModeTabs;
@@ -16,9 +22,11 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -61,7 +69,6 @@ public class DwarvenRunecraft {
 
 
 
-
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
         modEventBus.addListener(this::commonSetup);
@@ -94,6 +101,23 @@ public class DwarvenRunecraft {
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
+
+        @SubscribeEvent
+        public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event){
+            event.registerEntityRenderer(ModEntityTypes.DWARF.get(), DwarfEntityRenderer::new);
+            event.registerEntityRenderer(ModEntityTypes.IDENTIFIER.get(), IdentifierEntityRenderer::new);
+        }
+
+        @SubscribeEvent
+        public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event){
+
+            event.registerLayerDefinition(DwarfEntityModel.LAYER_LOCATION, DwarfEntityModel::createBodyLayer);
+            event.registerLayerDefinition(IdentifierEntityModel.LAYER_LOCATION, IdentifierEntityModel::createBodyLayer);
+
+
+        }
+
+
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
 
@@ -106,11 +130,21 @@ public class DwarvenRunecraft {
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_EITR.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_EITR.get(), RenderType.translucent());
 
-
-
-
-
         }
+
+    }
+
+
+
+
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class CommonModEvents {
+        @SubscribeEvent
+        public static void entityAttributes(EntityAttributeCreationEvent event){
+            event.put(ModEntityTypes.DWARF.get(), DwarfEntity.setAttributes());
+            event.put(ModEntityTypes.IDENTIFIER.get(), IdentifierEntity.setAttributes());
+        }
+
     }
 
 }

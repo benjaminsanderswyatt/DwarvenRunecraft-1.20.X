@@ -2,11 +2,14 @@ package net.bsw.dwarvenrunecraft.effect;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.game.ClientboundRemoveMobEffectPacket;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.BossEvent;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.PlayerRideable;
 import net.minecraft.world.entity.TamableAnimal;
@@ -39,9 +42,6 @@ public class ColouredGlowingEffect extends MobEffect {
 
         if (!pLivingEntity.level().isClientSide) {
 
-            int range = 50;
-
-            int i = pLivingEntity.getEffect(this).getDuration();
 
             Scoreboard scoreboard = pLivingEntity.getCommandSenderWorld().getServer().getScoreboard();
 
@@ -100,10 +100,11 @@ public class ColouredGlowingEffect extends MobEffect {
 
             scoreboard.addPlayerToTeam(pLivingEntity.getScoreboardName(), team);
 
+            int time = pLivingEntity.getEffect(this).getDuration();
+
             pLivingEntity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 5, 0, false, false));
 
-
-            if (i <= 0) {
+            if (time <= 1) {
                 removeTeam(scoreboard, teamBoss);
                 removeTeam(scoreboard, teamPlayer);
                 removeTeam(scoreboard, teamNpc);

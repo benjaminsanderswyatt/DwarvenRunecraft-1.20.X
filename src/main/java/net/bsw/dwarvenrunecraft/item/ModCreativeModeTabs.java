@@ -61,6 +61,14 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.BEER.get());
 
 
+
+                        pOutput.accept(ModItems.DWARF_SPAWN_EGG.get());
+
+
+
+
+                        pOutput.accept(ModBlocks.LAUNCH_PAD.get());
+
                         //Fluid buckets
                         pOutput.accept(ModItems.UNSTABLE_CRYSTAL_ICHOR_BUCKET.get());
                         pOutput.accept(ModItems.PURE_LAGUZ_BUCKET.get());
