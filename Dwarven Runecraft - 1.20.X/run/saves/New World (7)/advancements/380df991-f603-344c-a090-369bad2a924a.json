@@ -1,0 +1,297 @@
+{
+  "minecraft:recipes/building_blocks/stone_bricks": {
+    "criteria": {
+      "has_stone": "2024-07-08 21:12:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2024-07-08 21:12:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/emerald_from_smelting_emerald_ore": {
+    "criteria": {
+      "has_emerald_ore": "2024-07-08 21:05:48 +0100"
+    },
+    "done": true
+  },
+  "dwarvenrunecraft:recipes/building_blocks/polished_calcite_wall": {
+    "criteria": {
+      "has_polished_calcite": "2024-07-08 21:07:58 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_dark_calcite_stairs_from_dark_calcite_stonecutting": {
+    "criteria": {
+      "has_dark_calcite": "2024-07-08 21:09:33 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2024-07-08 21:12:03 +0100"
+    },
+    "done": true
+  },
+  "dwarvenrunecraft:recipes/building_blocks/dark_calcite_wall": {
+    "criteria": {
+      "has_dark_calcite": "2024-07-08 21:09:33 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_dark_calcite_slab_from_polished_dark_calcite_stonecutting": {
+    "criteria": {
+      "has_polished_dark_calcite": "2024-07-08 21:09:35 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/emerald_from_blasting_emerald_ore": {
+    "criteria": {
+      "has_emerald_ore": "2024-07-08 21:05:48 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/lapis_lazuli_from_blasting_lapis_ore": {
+    "criteria": {
+      "has_lapis_ore": "2024-07-08 21:16:34 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_calcite_wall_from_polished_calcite_stonecutting": {
+    "criteria": {
+      "has_polished_calcite": "2024-07-08 21:07:58 +0100"
+    },
+    "done": true
+  },
+  "dwarvenrunecraft:recipes/building_blocks/polished_dark_calcite_wall": {
+    "criteria": {
+      "has_polished_dark_calcite": "2024-07-08 21:09:35 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_slab_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2024-07-08 21:12:03 +0100"
+    },
+    "done": true
+  },
+  "dwarvenrunecraft:recipes/building_blocks/polished_dark_calcite_slab": {
+    "criteria": {
+      "has_polished_dark_calcite": "2024-07-08 21:09:35 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_calcite_slab_from_polished_calcite_stonecutting": {
+    "criteria": {
+      "has_polished_calcite": "2024-07-08 21:07:58 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/diamond_from_smelting_diamond_ore": {
+    "criteria": {
+      "has_diamond_ore": "2024-07-08 21:05:45 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_bricks_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2024-07-08 21:12:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_slab": {
+    "criteria": {
+      "has_stone": "2024-07-08 21:12:03 +0100"
+    },
+    "done": true
+  },
+  "dwarvenrunecraft:recipes/building_blocks/dark_calcite_slab": {
+    "criteria": {
+      "has_dark_calcite": "2024-07-08 21:09:33 +0100"
+    },
+    "done": true
+  },
+  "dwarvenrunecraft:recipes/building_blocks/celestite_block": {
+    "criteria": {
+      "has_celestite_shard": "2024-07-08 21:08:13 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2024-07-08 21:02:23 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2024-07-08 21:11:32 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_stone_bricks_stone_from_stonecutting": {
+    "criteria": {
+      "has_stone": "2024-07-08 21:12:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dark_calcite_wall_from_dark_calcite_stonecutting": {
+    "criteria": {
+      "has_dark_calcite": "2024-07-08 21:09:33 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_dark_calcite": {
+    "criteria": {
+      "has_polished_calcite": "2024-07-08 21:09:33 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_stairs_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2024-07-08 21:12:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2024-07-08 21:14:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/diamond_from_blasting_diamond_ore": {
+    "criteria": {
+      "has_diamond_ore": "2024-07-08 21:05:45 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_dark_calcite_from_dark_calcite_stonecutting": {
+    "criteria": {
+      "has_dark_calcite": "2024-07-08 21:09:33 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/stone_button": {
+    "criteria": {
+      "has_stone": "2024-07-08 21:12:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_dark_calcite_wall_from_dark_calcite_stonecutting": {
+    "criteria": {
+      "has_dark_calcite": "2024-07-08 21:09:33 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/stonecutter": {
+    "criteria": {
+      "has_stone": "2024-07-08 21:12:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:plains": "2024-07-08 21:02:25 +0100"
+    },
+    "done": false
+  },
+  "minecraft:recipes/redstone/stone_pressure_plate": {
+    "criteria": {
+      "has_stone": "2024-07-08 21:12:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dark_calcite_stairs_from_dark_calcite_stonecutting": {
+    "criteria": {
+      "has_dark_calcite": "2024-07-08 21:09:33 +0100"
+    },
+    "done": true
+  },
+  "dwarvenrunecraft:recipes/building_blocks/polished_dark_calcite_stairs": {
+    "criteria": {
+      "has_polished_dark_calcite": "2024-07-08 21:09:35 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_stone": {
+    "criteria": {
+      "has_stone": "2024-07-08 21:12:03 +0100"
+    },
+    "done": true
+  },
+  "dwarvenrunecraft:recipes/building_blocks/polished_calcite_slab": {
+    "criteria": {
+      "has_polished_calcite": "2024-07-08 21:07:58 +0100"
+    },
+    "done": true
+  },
+  "dwarvenrunecraft:recipes/building_blocks/polished_calcite_stairs": {
+    "criteria": {
+      "has_polished_calcite": "2024-07-08 21:07:58 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_calcite_stairs_from_polished_calcite_stonecutting": {
+    "criteria": {
+      "has_polished_calcite": "2024-07-08 21:07:58 +0100"
+    },
+    "done": true
+  },
+  "dwarvenrunecraft:recipes/building_blocks/dark_calcite_stairs": {
+    "criteria": {
+      "has_dark_calcite": "2024-07-08 21:09:33 +0100"
+    },
+    "done": true
+  },
+  "dwarvenrunecraft:recipes/building_blocks/polished_dark_calcite": {
+    "criteria": {
+      "has_dark_calcite": "2024-07-08 21:09:33 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_dark_calcite_slab_from_dark_calcite_stonecutting": {
+    "criteria": {
+      "has_dark_calcite": "2024-07-08 21:09:33 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dark_calcite_slab_from_dark_calcite_stonecutting": {
+    "criteria": {
+      "has_dark_calcite": "2024-07-08 21:09:33 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_dark_calcite_wall_from_polished_dark_calcite_stonecutting": {
+    "criteria": {
+      "has_polished_dark_calcite": "2024-07-08 21:09:35 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/stone_brick_walls_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2024-07-08 21:12:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/lapis_lazuli_from_smelting_lapis_ore": {
+    "criteria": {
+      "has_lapis_ore": "2024-07-08 21:16:34 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_stairs": {
+    "criteria": {
+      "has_stone": "2024-07-08 21:12:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_dark_calcite_stairs_from_polished_dark_calcite_stonecutting": {
+    "criteria": {
+      "has_polished_dark_calcite": "2024-07-08 21:09:35 +0100"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}

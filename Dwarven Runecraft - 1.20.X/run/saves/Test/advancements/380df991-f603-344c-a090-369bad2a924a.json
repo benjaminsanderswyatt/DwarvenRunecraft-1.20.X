@@ -1,0 +1,21 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2023-10-07 16:33:39 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:plains": "2023-10-07 16:33:42 +0100"
+    },
+    "done": false
+  },
+  "dwarvenrunecraft:recipes/building_blocks/celestite_block": {
+    "criteria": {
+      "has_celestite_shard": "2023-10-10 11:53:14 +0100"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}

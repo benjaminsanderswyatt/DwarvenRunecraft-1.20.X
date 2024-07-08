@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dwarvenrunecraft:block/polished_dark_calcite_slab"
+    },
+    "type=double": {
+      "model": "dwarvenrunecraft:block/polished_dark_calcite"
+    },
+    "type=top": {
+      "model": "dwarvenrunecraft:block/polished_dark_calcite_slab_top"
+    }
+  }
+}

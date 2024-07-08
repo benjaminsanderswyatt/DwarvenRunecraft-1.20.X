@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dwarvenrunecraft:item/pure_laguz_bucket"
+  }
+}

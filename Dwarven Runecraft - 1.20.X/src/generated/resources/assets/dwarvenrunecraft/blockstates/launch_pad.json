@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "dwarvenrunecraft:block/launch_pad"
+    },
+    "powered=true": {
+      "model": "dwarvenrunecraft:block/launch_pad_down"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "dwarvenrunecraft:block/polished_dark_calcite",
+    "side": "dwarvenrunecraft:block/polished_dark_calcite",
+    "top": "dwarvenrunecraft:block/polished_dark_calcite"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "dwarvenrunecraft:polished_calcite"
+  },
+  "result": "dwarvenrunecraft:polished_calcite_wall"
+}

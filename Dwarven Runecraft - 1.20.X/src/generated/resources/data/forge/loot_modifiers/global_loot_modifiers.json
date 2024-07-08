@@ -1,0 +1,17 @@
+{
+  "entries": [
+    "dwarvenrunecraft:beer_from_hero_of_the_village",
+    "dwarvenrunecraft:beer_from_shipwreck_supply",
+    "dwarvenrunecraft:item_magnet_from_pillager_outpost",
+    "dwarvenrunecraft:beer_from_village_toolsmith",
+    "dwarvenrunecraft:celestite_shard_from_village_temple",
+    "dwarvenrunecraft:ore_scanner_from_buried_treasure",
+    "dwarvenrunecraft:ore_scanner_from_ancient_city",
+    "dwarvenrunecraft:transformation_dust_from_igloo_chest",
+    "dwarvenrunecraft:beer_from_village_weaponsmith",
+    "dwarvenrunecraft:ore_scanner_from_shipwreck_treasure",
+    "dwarvenrunecraft:item_magnet_from_simple_dungeon",
+    "dwarvenrunecraft:transformation_dust_from_witch"
+  ],
+  "replace": false
+}
